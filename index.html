@@ -10,4 +10,21 @@
     <p>Welcome to LAMA Directory <br>This is more of a private directory, but if you want to use the site, i have no problem with it</p>
     <h6>Btw, this site is open-source <br>
     <a href="https://github.com/LAMAgalletta0IQ" class"_blank">Check it out :p</a></h6>
+    <a href="#" onclick="showEmbed()">Click here</a>
+
+    <div id="videoContainer" class="hidden">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        function showEmbed() {
+            document.getElementById("videoContainer").classList.remove("hidden");
+        }
+    </script>
+
 </body>
