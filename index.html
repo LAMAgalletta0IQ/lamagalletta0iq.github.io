@@ -1,30 +1,89 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset = "UTF-8"></charset>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>/ - LAMA Directory</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>LAMA Directory</h1>
-    <p>Welcome to LAMA Directory <br>This is more of a private directory, but if you want to use the site, i have no problem with it</p>
+    <p>Welcome to LAMA Directory <br>This is more of a private directory, but if you want to use the site, I have no problem with it</p>
     <h6>Btw, this site is open-source <br>
-    <a href="https://github.com/LAMAgalletta0IQ" class"_blank">Check it out :p</a></h6>
-    <a href="#" onclick="showEmbed()">Click here</a>
+    <a href="https://github.com/LAMAgalletta0IQ" target="_blank">Check it out :p</a></h6>
 
-    <div id="videoContainer" class="hidden">
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <!-- Table for File Manager -->
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>File Type</th>
+                <th>Size</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>example.txt</td>
+                <td>Text File</td>
+                <td>15 KB</td>
+                <td>
+                    <div class="action-buttons">
+                        <button onclick="renameFile('example.txt')">Rename</button>
+                        <button onclick="deleteFile('example.txt')">Delete</button>
+                        <button onclick="downloadFile('example.txt')">Download</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>image.jpg</td>
+                <td>Image File</td>
+                <td>2 MB</td>
+                <td>
+                    <div class="action-buttons">
+                        <button onclick="renameFile('image.jpg')">Rename</button>
+                        <button onclick="deleteFile('image.jpg')">Delete</button>
+                        <button onclick="downloadFile('image.jpg')">Download</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>document.pdf</td>
+                <td>PDF Document</td>
+                <td>1 MB</td>
+                <td>
+                    <div class="action-buttons">
+                        <button onclick="renameFile('document.pdf')">Rename</button>
+                        <button onclick="deleteFile('document.pdf')">Delete</button>
+                        <button onclick="downloadFile('document.pdf')">Download</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
+    <!-- JavaScript for File Manager actions -->
     <script>
-        function showEmbed() {
-            document.getElementById("videoContainer").classList.remove("hidden");
+        function renameFile(fileName) {
+            let newName = prompt('Enter new name for the file: ', fileName);
+            if (newName) {
+                alert('File "' + fileName + '" renamed to "' + newName + '"');
+            }
+        }
+
+        function deleteFile(fileName) {
+            let confirmDelete = confirm('Are you sure you want to delete "' + fileName + '"?');
+            if (confirmDelete) {
+                alert('File "' + fileName + '" deleted.');
+            }
+        }
+
+        function downloadFile(fileName) {
+            alert('Downloading "' + fileName + '"...');
+            // In a real application, you would trigger a file download here.
         }
     </script>
 
 </body>
+</html>
