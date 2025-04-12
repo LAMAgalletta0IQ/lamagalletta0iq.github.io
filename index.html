@@ -29,11 +29,6 @@
                 <td>Text File</td>
                 <td>15 KB</td>
                 <td>
-                    <div class="action-buttons">
-                        <button onclick="renameFile('example.txt')">Rename</button>
-                        <button onclick="deleteFile('example.txt')">Delete</button>
-                        <button onclick="downloadFile('example.txt')">Download</button>
-                    </div>
                 </td>
             </tr>
             <tr>
@@ -41,11 +36,6 @@
                 <td>Image File</td>
                 <td>2 MB</td>
                 <td>
-                    <div class="action-buttons">
-                        <button onclick="renameFile('image.jpg')">Rename</button>
-                        <button onclick="deleteFile('image.jpg')">Delete</button>
-                        <button onclick="downloadFile('image.jpg')">Download</button>
-                    </div>
                 </td>
             </tr>
             <tr>
@@ -53,37 +43,11 @@
                 <td>PDF Document</td>
                 <td>1 MB</td>
                 <td>
-                    <div class="action-buttons">
-                        <button onclick="renameFile('document.pdf')">Rename</button>
-                        <button onclick="deleteFile('document.pdf')">Delete</button>
-                        <button onclick="downloadFile('document.pdf')">Download</button>
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-
-    <!-- JavaScript for File Manager actions -->
-    <script>
-        function renameFile(fileName) {
-            let newName = prompt('Enter new name for the file: ', fileName);
-            if (newName) {
-                alert('File "' + fileName + '" renamed to "' + newName + '"');
-            }
-        }
-
-        function deleteFile(fileName) {
-            let confirmDelete = confirm('Are you sure you want to delete "' + fileName + '"?');
-            if (confirmDelete) {
-                alert('File "' + fileName + '" deleted.');
-            }
-        }
-
-        function downloadFile(fileName) {
-            alert('Downloading "' + fileName + '"...');
-            // In a real application, you would trigger a file download here.
-        }
-    </script>
 
 </body>
 </html>
