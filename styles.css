@@ -1,70 +1,14 @@
 body {
     background-color: #1a1a1a;
-    background: url(images/wallpaper.png);
-    background-size: cover;
-    background-position: fixed;
-    color: #fff; /* Shortened color code */
-    font-family: 'Segoe UI', sans-serif; /* Added fallback font */
 }
 
+
 h1 {
+    color: white;
     text-align: center;
-    color: #fff; /* Shortened color code */
 }
 
 p {
+    color: white;
     text-align: center;
-    color: #fff; /* Shortened color code */
-}
-
-h6 {
-    text-align: center;
-    color: #fff; /* Shortened color code */
-}
-
-a {
-    color: #fff; /* Shortened color code */
-    text-decoration: none; /* Optional: Remove underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #333;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.action-buttons button {
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #444;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-}
-
-.action-buttons button:hover {
-    background-color: #666;
 }
